@@ -3,7 +3,7 @@ function getFirstSelector(selector) {
 }
 
 function nestedTarget() {
-    return document.querySelector('div.target');
+    return document.querySelector('.target');
 }
 
 function increaseRankBy(n) {
@@ -16,14 +16,6 @@ function increaseRankBy(n) {
   }
 }
 
-
 function deepestChild() {
-    let node = document.querySelector('div#grand-node');
-    let childNode = node.children[0];
-  
-    while(childNode) {
-      node = childNode;
-      childNode = node.children[0];
-    }
-    return node;
+    return document.querySelector('div#grand-node div div div div')
   }
